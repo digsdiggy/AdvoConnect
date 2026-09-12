@@ -2672,19 +2672,47 @@ a {
 .drop-btn:hover {
   color: #b9d8f5;
 }
+```css
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
 @media (max-width: 900px) {
+
+  /* Keep the navigation area navy */
   .nav-menu {
-    background: #ffffff;
+    background: transparent;
   }
 
+  /* Mobile navigation links */
   .nav-item > a,
   .drop-btn {
-    color: #071b33;
+    color: #ffffff;
   }
 
+  /* Hover / active state */
   .nav-item > a:hover,
-  .drop-btn:hover {
+  .drop-btn:hover,
+  .dropdown.open > .drop-btn {
+    color: #b9d8f5;
+    background: rgba(255, 255, 255, .06);
+  }
+
+  /* Mobile dropdown */
+  .dropdown-menu {
+    background: #ffffff;
+    border: 1px solid #e5e9ee;
+    box-shadow: 0 15px 35px rgba(7, 27, 51, .20);
+  }
+
+  /* Dropdown links */
+  .dropdown-menu a {
+    color: #142338;
+  }
+
+  .dropdown-menu a:hover {
     color: #1769a8;
+    background: #f1f4f7;
   }
 }
 
