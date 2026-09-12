@@ -2716,4 +2716,441 @@ a {
   }
 }
 
+```css
+/* =========================================================
+   RESPONSIVE NAVIGATION
+========================================================= */
+
+.menu-toggle {
+  display: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .navbar {
+    min-height: 70px;
+    padding: 12px 20px;
+    gap: 15px;
+  }
+
+  .nav-menu {
+    gap: 0;
+  }
+
+  .nav-item > a,
+  .drop-btn {
+    padding: 0 8px;
+    font-size: .76rem;
+  }
+
+  .nav-cta a {
+    padding: 0 13px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  /* Header */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  /* Top row */
+  .navbar {
+    width: 100%;
+    min-height: 68px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 18px;
+
+    gap: 10px;
+  }
+
+  /* Logo */
+  .logo {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .logo-image {
+    width: 38px;
+    height: 38px;
+  }
+
+  .logo-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .logo-name {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+
+  /* =====================================================
+     HAMBURGER
+  ===================================================== */
+
+  .menu-toggle {
+    display: flex !important;
+
+    width: 42px;
+    height: 42px;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 5px;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 8px;
+
+    background: rgba(255,255,255,.06);
+
+    color: white;
+
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    background: white;
+
+    border-radius: 2px;
+
+    transition: .2s ease;
+  }
+
+  .menu-toggle:hover {
+    background: rgba(255,255,255,.12);
+  }
+
+
+  /* =====================================================
+     MOBILE NAVIGATION MENU
+  ===================================================== */
+
+  .nav-menu {
+    position: absolute;
+
+    top: 68px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 8px 14px 16px;
+
+    background: #071b33;
+
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    box-shadow:
+      0 18px 35px rgba(0,0,0,.2);
+
+    overflow: visible;
+  }
+
+  /* When JavaScript adds .open */
+  .nav-menu.open {
+    display: flex;
+  }
+
+
+  /* =====================================================
+     NAV ITEMS
+  ===================================================== */
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-item > a,
+  .drop-btn {
+    width: 100%;
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 12px;
+
+    border-radius: 7px;
+
+    color: white;
+
+    font-size: .84rem;
+    font-weight: 650;
+
+    background: transparent;
+  }
+
+  .nav-item > a:hover,
+  .drop-btn:hover,
+  .dropdown.open > .drop-btn {
+    color: #b9d8f5;
+    background: rgba(255,255,255,.06);
+  }
+
+
+  /* =====================================================
+     MOBILE DROPDOWNS
+  ===================================================== */
+
+  .dropdown-menu {
+    position: static;
+
+    width: 100%;
+
+    margin: 2px 0 6px;
+
+    padding: 5px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e9ee;
+    border-radius: 8px;
+
+    box-shadow: none;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: none;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition:
+      opacity .2s ease,
+      max-height .25s ease,
+      visibility .2s ease;
+  }
+
+  /* Open dropdown */
+  .dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+
+    max-height: 500px;
+  }
+
+  .dropdown-menu a {
+    min-height: 42px;
+
+    color: #142338;
+
+    padding: 9px 12px;
+
+    font-size: .8rem;
+  }
+
+  .dropdown-menu a:hover {
+    color: #1769a8;
+    background: #f1f4f7;
+    padding-left: 16px;
+  }
+
+
+  /* =====================================================
+     SUPPORT BUTTON
+  ===================================================== */
+
+  .nav-cta {
+    width: 100%;
+
+    margin: 8px 0 0;
+  }
+
+  .nav-cta a {
+    width: 100%;
+
+    min-height: 45px;
+
+    color: #071b33;
+
+    background: white;
+
+    border-radius: 7px;
+  }
+}
+
+```css
+/* =========================================================
+   RESPONSIVE FOOTER
+========================================================= */
+
+@media (max-width: 650px) {
+
+  footer {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* Main footer */
+  .footer-main {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+
+    padding: 50px 20px 40px;
+  }
+
+  /* Brand */
+  .footer-brand {
+    max-width: 100%;
+  }
+
+  .footer-logo {
+    margin-bottom: 15px;
+  }
+
+  .footer-logo .logo-image {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footer-logo .logo-name {
+    font-size: 1rem;
+  }
+
+  .footer-brand p {
+    max-width: 330px;
+
+    color: #91a2b3;
+
+    font-size: .82rem;
+    line-height: 1.7;
+  }
+
+
+  /* Footer link columns */
+  .footer-links {
+    width: 100%;
+  }
+
+  .footer-links h4 {
+    margin-bottom: 13px;
+
+    color: white;
+
+    font-size: .72rem;
+    letter-spacing: .12em;
+  }
+
+  .footer-links a {
+    margin: 7px 0;
+
+    color: #91a2b3;
+
+    font-size: .8rem;
+    line-height: 1.6;
+  }
+
+  .footer-links a:hover {
+    color: white;
+  }
+
+
+  /* Address */
+  .footer-address {
+    width: 100%;
+  }
+
+  .footer-address address {
+    color: #91a2b3;
+
+    font-size: .8rem;
+    line-height: 1.8;
+
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+
+  /* Footer bottom */
+  .footer-bottom {
+    width: 100%;
+
+    padding: 18px 20px 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    color: #6f8091;
+
+    font-size: .68rem;
+
+    line-height: 1.6;
+  }
+
+  .footer-bottom span {
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .footer-main {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer-brand p,
+  .footer-links a,
+  .footer-address address {
+    font-size: .77rem;
+  }
+}
+
 
