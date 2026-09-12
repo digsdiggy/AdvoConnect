@@ -324,7 +324,7 @@ top: calc(100% - 1px);
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateY(-50px);
+  transform: translateY(8px);
 }
 
 /* Dropdown links */
