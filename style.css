@@ -160,7 +160,15 @@ button {
   min-height: 78px;
   margin: 0 auto;
   padding: 0 30px;
-
+background: --gradient-grey:
+    linear-gradient(
+      135deg,
+      #FCFDFE 0%,
+      #F6F8FA 22%,
+      #EDF1F4 46%,
+      #E2E7EC 70%,
+      #D4DAE1 100%
+    );
   display: flex;
   align-items: center;
   gap: 35px;
@@ -325,7 +333,7 @@ top: calc(100% - 1px);
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0px);
+  transform: translateY(-10px);
 }
 
 /* Dropdown links */
