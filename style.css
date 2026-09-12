@@ -284,6 +284,7 @@ button {
 ========================================================= */
 
 .nav-item.dropdown {
+  font: white;
   position: relative;
 }
 
@@ -324,7 +325,7 @@ top: calc(100% - 1px);
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateY(8px);
+  transform: translateY(50px);
 }
 
 /* Dropdown links */
