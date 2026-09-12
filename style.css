@@ -2578,15 +2578,43 @@ b {
 }
 
 /* Navigation on light backgrounds */
-.nav-menu a,
-.nav-menu button {
-  color: #071b33;
+```css
+/* =========================================================
+   NAVIGATION TEXT
+========================================================= */
+
+/* Main navigation sits on the navy header */
+.nav-item > a,
+.nav-item > .drop-btn {
+  color: #ffffff;
 }
 
-/* Dropdown text */
+/* Main navigation hover */
+.nav-item > a:hover,
+.nav-item > .drop-btn:hover,
+.dropdown.open > .drop-btn {
+  color: #b9d8f5;
+}
+
+/* Dropdown menus have a white background */
+.dropdown-menu {
+  background: #ffffff;
+}
+
+/* Dropdown links need dark text */
 .dropdown-menu a {
   color: #142338;
 }
+
+/* Dropdown link hover */
+.dropdown-menu a:hover {
+  color: #1769a8;
+  background: #f1f4f7;
+}
+
+/* =========================================================
+   NAVIGATION TEXT
+========================================================= */
 
 /* General links */
 a {
